@@ -1,0 +1,29 @@
+[package]
+name = "omnidb"
+version = "0.1.0"
+authors = ["Kye Gomez <kye@swarms.world>"]
+edition = "2021"
+description = "OmniDb - A state-of-the-art database combining SQL, NoSQL, and file storage in Rust"
+license = "MIT"
+
+# Documentation and repository info
+homepage = "https://github.com/kyegomez/omnidb"
+repository = "https://github.com/kyegomez/omnidb"
+readme = "README.md"
+keywords = ["database", "SQL", "NoSQL", "rust", "file-storage"]
+categories = ["database", "data-structures"]
+
+[dependencies]
+# Serde for serialization and deserialization of data
+serde = { version = "1.0", features = ["derive"] } # JSON serialization and deserialization
+serde_json = "1.0" # JSON serialization and deserialization
+chrono = "0.4" # Time handling # Chrono for handling timestamps (NaiveDateTime)
+log = "0.4" # Logging
+env_logger = "0.9" # Logging
+
+# Concurrency - Rust standard library already provides most functionality (Arc, RwLock)
+
+# Optional feature for better multi-threading (Tokio or Rayon can be added in the future if needed)
+# tokio = { version = "1", features = ["full"] }
+# rayon = "1.5"
+# [dev-dependencies]
